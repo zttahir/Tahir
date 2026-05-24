@@ -3,92 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Blog</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial;
-    background:#f5f5f5;
-}
-
-/* HEADER */
-.header{
-    background:#ff5c00;
-    padding:15px;
-    text-align:center;
-    color:white;
-    font-size:22px;
-    font-weight:bold;
-}
-
-/* SEARCH BAR */
-.search-box{
-    display:flex;
-    margin:15px;
-}
-.search-box input{
-    flex:1;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:5px 0 0 5px;
-}
-.search-box button{
-    background:#ff5c00;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:0 5px 5px 0;
-}
-
-/* CARD */
-.card{
-    background:white;
-    margin:15px;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.card img{
-    width:100%;
-}
-
-.card-content{
-    padding:15px;
-}
-
-.title{
-    font-size:18px;
-    font-weight:bold;
-}
-
-.date{
-    font-size:12px;
-    color:gray;
-}
-</style>
-
+<title>ZT Tahir</title>
 </head>
 <body>
+    <!!-- Style CSS DESIGN--->
+    <style>
+    
+    body {
+    margin: 0;
+    padding: 0;
+}
+    
+        .box {
+        background: orangered;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
 
-<div class="header">
-MY EDITZ BLOG
-</div>
+   .searchbox {
+       padding: 10px;
+   }
 
-<div class="search-box">
-<input type="text" placeholder="Search...">
-<button>Search</button>
-</div>
+     .search {
+     background: white;
+     width: 77%;
+     border: none;
+     outline: none;
+     font-size: 18px;
+     padding: 8px;
+     border-radius: 10px;
+    border: 2px solid #DDDDDD;
+}    
+    .btn {
+        background: orangered;
+        border: none;
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+     
+     .img {
+         width: 100%;
+         border-radius: 10px;
+         margin-top: 10px;
+     }
+     .btnsave {
+    background: orangered;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 10px;
+}
+    </style>
 
-<div class="card">
-<img src="https://picsum.photos/600/300" />
-<div class="card-content">
-<div class="title">Instagram Lofi Dusk Filter AI Editing</div>
-<div class="date">May 2026 • Admin</div>
-<p>Yahan tum apna article likh sakte ho...</p>
-</div>
-</div>
+   <div class="box">
+       <h1>Tahir ZT</h1>
+   </div>
+    <!-- MAIN UI DESIGN STRAT -->
+   <div class="searchbox">
+       <h1>I'm Web Designer</h1>
+       <input type="search" class="search" placeholder="Search Here...">
+       <button class="btn">Search</button>
+       
+       <img src="https://raw.githubusercontent.com/zttahir/Tahir/d5c0bbba1eb252fb7c0fc9d39d8bf0b0598c840c/Assets/pubgtencent.jpg" class="img">
+       <button class="btnsave">download</button>
+       <img src="https://raw.githubusercontent.com/zttahir/Tahir/d5c0bbba1eb252fb7c0fc9d39d8bf0b0598c840c/Assets/mypng.png" class="img">
+       <button class="btnsave">Download</button>
+   </div>
+
+
 
 </body>
 </html>
