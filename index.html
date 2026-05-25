@@ -1,78 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZT Tahir</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>ZT Tahir Store</title>
+
+
+
+<!-- HERE CSS DESIGN START -->
+
+<style>
+
+body{
+
+    margin:0;
+    padding:0;
+
+    background:#f5f5f5;
+
+    font-family:sans-serif;
+}
+
+/* HEADER (STICKY FIX) */
+.header{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    background:#f5f5f5;
+
+}
+
+/* TOP BAR */
+.box{
+
+    background:orangered;
+
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+}
+
+/* SEARCH BOX */
+.searchbox{
+
+    padding:10px;
+
+    background:#f5f5f5;
+}
+
+/* SEARCH INPUT */
+.search{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:12px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    border:2px solid #ddd;
+
+    font-size:16px;
+}
+
+/* CARD */
+.card{
+
+    background:white;
+
+    margin:10px;
+
+    padding:10px;
+
+    border-radius:15px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+/* TITLE */
+.title{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+}
+
+/* ABOUT */
+.about{
+
+    color:gray;
+
+    margin-top:5px;
+}
+
+/* DOWNLOAD BUTTON */
+.btnsave{
+
+    display:block;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    margin-top:12px;
+
+    padding:12px;
+
+    background:orangered;
+
+    color:white;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+</style>
+
+<!-- HERE CSS DESIGN END -->
+
 </head>
+
+
+
 <body>
-    <!!-- Style CSS DESIGN--->
-    <style>
-    
-    body {
-    margin: 0;
-    padding: 0;
-}
-    
-        .box {
-        background: orangered;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
 
-   .searchbox {
-       padding: 10px;
-   }
 
-     .search {
-     background: white;
-     width: 77%;
-     border: none;
-     outline: none;
-     font-size: 18px;
-     padding: 8px;
-     border-radius: 10px;
-    border: 2px solid #DDDDDD;
-}    
-    .btn {
-        background: orangered;
-        border: none;
-        font-size: 18px;
-        padding: 8px;
-        border-radius: 10px;
+
+<!-- HERE HTML START -->
+
+
+
+<!-- HEADER (FIXED AREA) -->
+<div class="header">
+
+    <div class="box">
+
+        <h2>WORK IN PROGRESS!!</h2>
+
+    </div>
+
+
+
+    <!-- SEARCH BAR -->
+
+    <div class="searchbox">
+
+        <input type="search"
+
+        id="search"
+
+        class="search"
+
+        placeholder="Search apps..."
+
+        oninput="searchApps()">
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- CARD 1 -->
+<div class="card">
+
+    <img class="img"
+    src="https://raw.githubusercontent.com/zttahir/Tahir/main/Assets/screenshot1.png">
+
+    <div class="title">
+        PUBG Tencent
+    </div>
+
+    <div class="about">
+    
+    <p>📌 Published By: Tahir</p>
+    <p>📅 Upload On: 20/05/2026</p>
+    <p>📂 Category: XML File</p>
+    
+    <p>✨ Stylish background image</p>
+    
+</div>
+
+    <a class="btnsave"
+    href="https://www.mediafire.com/">
+
+    Download
+
+    </a>
+
+</div>
+
+
+
+
+
+<!-- CARD 2 -->
+<div class="card">
+
+    <img class="img"
+    src="https://raw.githubusercontent.com/zttahir/Tahir/main/Assets/screenshot2.png">
+
+    <div class="title">
+        BR Game
+    </div>
+
+    <div class="about">
+
+    <p>📌 Published By: Tahir</p>
+    <p>📅 Upload On: 20/05/2026</p>
+    <p>📂 Category: XML File</p>
+
+    <p>✨ Stylish background image</p>
+
+</div>
+
+    <a class="btnsave"
+    href="https://www.mediafire.com/">
+
+    Download
+
+    </a>
+
+</div>
+
+
+
+
+
+<!-- CARD 3 -->
+<div class="card">
+
+    <img class="img"
+    src="https://raw.githubusercontent.com/zttahir/Tahir/main/Assets/pubgtencent.jpg">
+
+    <div class="title">
+        YouTube BG
+    </div>
+
+    <div class="about">
+    
+    <p>📌 Published By: Tahir</p>
+    <p>📅 Upload On: 20/05/2026</p>
+    <p>📂 Category: XML File</p>
+    
+    <p>✨ Stylish background image</p>
+    
+</div>
+
+    <a class="btnsave"
+    href="https://www.mediafire.com/">
+
+    Download
+
+    </a>
+
+</div>
+
+
+
+
+
+<!-- HERE JAVASCRIPT LOGIC START -->
+
+<script>
+
+function searchApps(){
+
+    let input = document
+    .getElementById("search")
+    .value
+    .toLowerCase()
+    .trim();
+
+    let cards =
+    document.querySelectorAll(".card");
+
+    if(input === ""){
+
+        cards.forEach(card => {
+            card.style.display = "block";
+        });
+
+        return;
     }
-     
-     .img {
-         width: 100%;
-         border-radius: 10px;
-         margin-top: 10px;
-     }
-     .btnsave {
-    background: orangered;
-    border: none;
-    width: 100%;
-    font-size: 18px;
-    padding: 8px;
-    border-radius: 10px;
-}
-    </style>
 
-   <div class="box">
-       <h1>Tahir ZT</h1>
-   </div>
-    <!-- MAIN UI DESIGN STRAT -->
-   <div class="searchbox">
-       <h1>I'm Web Designer</h1>
-       <input type="search" class="search" placeholder="Search Here...">
-       <button class="btn">Search</button>
-       
-       <img src="https://raw.githubusercontent.com/zttahir/Tahir/d5c0bbba1eb252fb7c0fc9d39d8bf0b0598c840c/Assets/pubgtencent.jpg" class="img">
-       <button class="btnsave">download</button>
-       <img src="https://raw.githubusercontent.com/zttahir/Tahir/d5c0bbba1eb252fb7c0fc9d39d8bf0b0598c840c/Assets/mypng.png" class="img">
-       <button class="btnsave">Download</button>
-   </div>
+    cards.forEach(card => {
+
+        let title =
+        card.querySelector(".title")
+        .innerText
+        .toLowerCase();
+
+        let about =
+        card.querySelector(".about")
+        .innerText
+        .toLowerCase();
+
+        if(
+            title.includes(input) ||
+            about.includes(input)
+        ){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+<!-- HERE JAVASCRIPT LOGIC END -->
 
 
 
