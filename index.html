@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZT Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header" id="mainHeader">
+
+  <div class="brand" onclick="goHome()">
+    <div class="brand-logo">ZT</div>
+
+    <div class="brand-text">
+      <div class="brand-name">ZT Store</div>
+      <div class="brand-sub">Apps & Tools</div>
+    </div>
+  </div>
+
+
+  <div class="toolbar-search">
+
+    <svg viewBox="0 0 24 24">
+      <circle
+        cx="11"
+        cy="11"
+        r="6.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"/>
+      <path
+        d="M16 16l5 5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"/>
+    </svg>
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search apps..."
+      autocomplete="off">
+
+  </div>
+
+
+  <button
+    class="refresh-btn"
+    id="refreshBtn"
+    type="button"
+    aria-label="Refresh">
+
+    <svg viewBox="0 0 24 24">
+
+      <path
+        d="M20 11a8 8 0 0 0-14.8-4"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+      <path
+        d="M20 5v6h-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+      <path
+        d="M4 13a8 8 0 0 0 14.8 4"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"/>
+
+      <path
+        d="M4 19v-6h6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+    </svg>
+
+  </button>
+
+</header>
+
+
+<main id="homePage">
+
+  <section class="hero">
+
+    <div class="hero-label">
+      ZT STORE
+    </div>
+
+    <h1>
+      Discover useful apps
+    </h1>
+
+    <p>
+      Simple, fast and useful apps made by ZT.
+    </p>
+
+  </section>
+
+
+  <section class="apps-section">
+
+    <div class="section-head">
+
+      <div>
+        <h2>Latest Apps</h2>
+        <p id="appCount">
+          Loading apps...
+        </p>
+      </div>
+
+    </div>
+
+
+    <div id="loading" class="loading">
+
+      <div class="loading-card"></div>
+      <div class="loading-card"></div>
+
+    </div>
+
+
+    <div id="appList" class="app-list"></div>
+
+
+    <div
+      id="noResults"
+      class="error-box"
+      style="display:none;">
+
+      <h3>
+        No apps found
+      </h3>
+
+      <p>
+        Try another app name.
+      </p>
+
+    </div>
+
+
+    <div
+      id="errorBox"
+      class="error-box"
+      style="display:none;">
+
+      <h3>
+        Apps load nahi ho rahi
+      </h3>
+
+      <p id="errorMessage">
+        GitHub se apps load karne mein problem hui.
+      </p>
+
+      <button
+        id="retryBtn"
+        type="button">
+        Try Again
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<main
+  id="detailsPage"
+  style="display:none;">
+
+  <div class="details-bar">
+
+    <button
+      id="backBtn"
+      class="back-btn"
+      type="button"
+      aria-label="Back">
+
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M15 18l-6-6 6-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+      </svg>
+
+    </button>
+
+    <h2>
+      App Details
+    </h2>
+
+  </div>
+
+
+  <div class="details-container">
+
+    <section class="app-header">
+
+      <img
+        id="detailIcon"
+        class="detail-icon"
+        src=""
+        alt="App Icon">
+
+      <div class="detail-main">
+
+        <h1 id="detailName">
+          App Name
+        </h1>
+
+        <p id="detailDeveloper">
+          Developer
+        </p>
+
+        <span
+          id="detailCategory"
+          class="category">
+          Apps
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <section class="action-section">
+
+      <a
+        id="downloadBtn"
+        class="download-btn"
+        href="#"
+        target="_blank"
+        rel="noopener">
+
+        <svg viewBox="0 0 24 24">
+
+          <path
+            d="M12 3v12"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+          <path
+            d="M7 11l5 5 5-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+          <path
+            d="M5 20h14"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+        </svg>
+
+        Download
+
+      </a>
+
+    </section>
+
+
+    <section
+      id="updateBox"
+      class="update-box"
+      style="display:none;">
+
+      <div class="update-icon">
+
+        <svg viewBox="0 0 24 24">
+
+          <path
+            d="M12 5v14"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+          <path
+            d="M6 13l6 6 6-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+
+        </svg>
+
+      </div>
+
+      <div>
+
+        <strong>
+          Update Available
+        </strong>
+
+        <span>
+          A newer version is available.
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <section class="details-section">
+
+      <h2>
+        App Information
+      </h2>
+
+      <div class="info-card">
+
+        <div class="info-row">
+          <span>Version</span>
+          <strong id="infoVersion">-</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Publish Date</span>
+          <strong id="infoPublish">-</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Last Update</span>
+          <strong id="infoUpdate">-</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Category</span>
+          <strong id="infoCategory">-</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Developer</span>
+          <strong id="infoDeveloper">-</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="details-section">
+
+      <div class="section-title">
+
+        <h2>
+          Preview
+        </h2>
+
+        <span>
+          Swipe to view
+        </span>
+
+      </div>
+
+      <div
+        id="preview"
+        class="preview">
+      </div>
+
+    </section>
+
+
+    <section class="details-section">
+
+      <h2>
+        About this app
+      </h2>
+
+      <div
+        id="about"
+        class="about">
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    ZT Store
+  </strong>
+
+  <span>
+    Apps made simple.
+  </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
