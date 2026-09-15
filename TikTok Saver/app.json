@@ -1,7 +1,7 @@
 {
   "name": "TikTok Saver",
-  "version": "1.1",
-  "developer": "Tahir",
+  "version": "1.2",
+  "developer": "Admin ZT",
   "about": "TikTok videos ko easily save aur download karne ke liye fast, simple aur easy-to-use app.",
   "publishDate": "2026-09-14",
   "lastUpdate": "2026-09-14",
@@ -15,6 +15,6 @@
     "picture_4.png"
   ],
   "download": "https://www.mediafire.com/your-download-link",
-  "updateAvailable": true,
-  "verified": true
+  "updateAvailable": false,
+  "verified": false
 }
