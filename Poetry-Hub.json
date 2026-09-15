@@ -1,0 +1,20 @@
+{
+  "name": "Poetry Hub",
+  "version": "1.0",
+  "developer": "Tahir",
+  "category": "Entertainment",
+  "publishDate": "2026-09-15",
+  "lastUpdate": "2026-09-15",
+  "about": "Poetry Hub par different types ki poetry read, search, copy aur share karein.",
+  "icon": "Poetry Hub/App_icon.png",
+  "video": "Poetry Hub/video_1.mp4",
+  "screenshots": [
+    "Poetry Hub/picture_1.png",
+    "Poetry Hub/picture_2.png",
+    "Poetry Hub/picture_3.png",
+    "Poetry Hub/picture_4.png"
+  ],
+  "download": "https://www.mediafire.com/your-download-link",
+  "updateAvailable": false,
+  "verified": true
+}

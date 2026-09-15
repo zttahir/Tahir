@@ -1,0 +1,20 @@
+{
+  "name": "ZT Wallpaper",
+  "version": "1.1",
+  "developer": "Tahir",
+  "category": "Personalization",
+  "publishDate": "2026-09-14",
+  "lastUpdate": "2026-09-14",
+  "about": "High quality wallpapers ke liye simple aur clean wallpaper app.",
+  "icon": "ZT Wallpaper/App_icon.png",
+  "video": "ZT Wallpaper/video_1.mp4",
+  "screenshots": [
+    "ZT Wallpaper/picture_1.png",
+    "ZT Wallpaper/picture_2.png",
+    "ZT Wallpaper/picture_3.png",
+    "ZT Wallpaper/picture_4.png"
+  ],
+  "download": "https://www.mediafire.com/your-download-link",
+  "updateAvailable": false,
+  "verified": true
+}
