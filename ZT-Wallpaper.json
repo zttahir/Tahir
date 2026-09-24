@@ -1,11 +1,28 @@
 {
-  "name": "ZT Wallpaper",
-  "version": "1.1",
+  "name": "Wallpaper 8K+",
+  "version": "1.2",
   "developer": "Tahir",
   "category": "Personalization",
   "publishDate": "2026-09-14",
   "lastUpdate": "2026-09-14",
-  "about": "High quality wallpapers ke liye simple aur clean wallpaper app.",
+  "about": "About This App
+
+Welcome to Wallpaper App — your simple and beautiful destination for high-quality wallpapers.
+
+Explore a collection of HD, Full HD, 4K and 8K wallpapers for your Android device. Find wallpapers in different styles and categories, save your favorites, and give your home screen and lock screen a fresh new look.
+
+Features:
+• High-quality wallpapers
+• 4K and 8K wallpapers
+• Different categories and styles
+• Easy wallpaper browsing
+• Save wallpapers to your device
+• Simple and clean interface
+• Regularly updated collection
+
+Made with ❤️ by ZT Tahir.
+
+Thank you for using Wallpaper App!",
   "icon": "ZT Wallpaper/App_icon.png",
   "video": "ZT Wallpaper/video_1.mp4",
   "screenshots": [
@@ -14,7 +31,7 @@
     "ZT Wallpaper/picture_3.png",
     "ZT Wallpaper/picture_4.png"
   ],
-  "download": "https://www.mediafire.com/your-download-link",
+  "download": "https://www.mediafire.com/file/qs1wfrd06scxvoi/Wallpaper_8K%252B_1.2.apk/file",
   "updateAvailable": false,
   "verified": true
 }
