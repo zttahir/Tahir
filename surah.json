@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "surah_number": 114,
+    "title_arabic": "سُورَةُ النَّاسِ",
+    "title_english": "Surah An-Nas",
+    "category": "Surah",
+    "reciter": "Qari Abdul Basit",
+    "audio_file": "audio1.m4a",
+    "description": "Complete Surah"
+  },
+  {
+    "id": 2,
+    "surah_number": 2,
+    "title_arabic": "سُورَةُ البَقَرَةِ",
+    "title_english": "Surah Al-Baqarah",
+    "category": "Surah",
+    "reciter": "Mishary Rashid Alafasy",
+    "audio_file": "audio1.m4a",
+    "description": "Selected Verses"
+  },
+  {
+    "id": 3,
+    "surah_number": 39,
+    "title_arabic": "قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا",
+    "title_english": "Surah Az-Zumar (Ayah 53)",
+    "category": "Ayat",
+    "reciter": "Qari Abdul Basit",
+    "audio_file": "audio1.m4a",
+    "description": "Ya Ibadial-Ladhina Asrafu"
+  },
+  {
+    "id": 4,
+    "surah_number": 55,
+    "title_arabic": "سُورَةُ الرَّحْمَٰن",
+    "title_english": "Surah Ar-Rahman",
+    "category": "Surah",
+    "reciter": "Abdur-Rahman As-Sudais",
+    "audio_file": "audio1.m4a",
+    "description": "Complete Surah"
+  }
+]
