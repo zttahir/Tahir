@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZT Apps - Website Moved</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #080F14;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Overlay / Dim Background */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 15, 20, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      animation: fadeIn 0.4s forwards ease-out;
+    }
+
+    /* Pop-up Card Box */
+    .popup-card {
+      background: #111C23;
+      border: 1px solid #29404B;
+      border-radius: 24px;
+      width: 90%;
+      max-width: 420px;
+      padding: 28px 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 200, 255, 0.15);
+      position: relative;
+      transform: scale(0.8);
+      animation: popupScale 0.4s forwards ease-out 0.1s;
+    }
+
+    /* Icon Badge */
+    .icon-badge {
+      width: 64px;
+      height: 64px;
+      background: rgba(0, 200, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px auto;
+      border: 1px solid #00C8FF;
+    }
+
+    .icon-badge svg {
+      width: 32px;
+      height: 32px;
+      fill: #00C8FF;
+    }
+
+    /* Title & Text */
+    .popup-title {
+      color: #F5FAFC;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .popup-text {
+      color: #9BAEB7;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .popup-text span {
+      color: #00C8FF;
+      font-weight: 600;
+    }
+
+    /* New Info Notice Box */
+    .info-box {
+      background: rgba(0, 200, 255, 0.08);
+      border: 1px dashed rgba(0, 200, 255, 0.3);
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .info-text {
+      color: #00C8FF;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Countdown Timer Badge */
+    .timer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+      color: #9BAEB7;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .timer-count {
+      color: #00C8FF;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    /* Animated Button */
+    .btn-open {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 0;
+      background: linear-gradient(135deg, #00C8FF, #0077FF);
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 200, 255, 0.4);
+      transition: all 0.3s ease;
+      animation: pulseBtn 2s infinite;
+    }
+
+    .btn-open:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 200, 255, 0.6);
+    }
+
+    .btn-open:active {
+      transform: translateY(1px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes popupScale {
+      to { transform: scale(1); }
+    }
+
+    @keyframes pulseBtn {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 255, 0.5);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(0, 200, 255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 200, 255, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pop-up Overlay -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+
+      <!-- Globe / Rocket Icon -->
+      <div class="icon-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        </svg>
+      </div>
+
+      <!-- Content -->
+      <h2 class="popup-title">We Have Moved!</h2>
+      <p class="popup-text">
+        Our website hosting has been upgraded to a new location. If you are looking for <span>ZT Apps</span>, please visit our official new domain.
+      </p>
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <span style="font-size: 16px;">💡</span>
+        <span class="info-text">Please update your bookmarks to the new URL for seamless access.</span>
+      </div>
+
+      <!-- Live Timer Display -->
+      <div class="timer-badge">
+        <span>Website Open In:</span>
+        <span class="timer-count" id="countdown">10s</span>
+      </div>
+
+      <!-- Animated Action Button -->
+      <a href="https://ztapps.mywebsitee.online/" class="btn-open">
+        🚀 Open New Website Now
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    // 10 Seconds Countdown Logic
+    let timeLeft = 10;
+    const countdownElement = document.getElementById('countdown');
+
+    const timerInterval = setInterval(function() {
+      timeLeft--;
+      if (timeLeft >= 0) {
+        countdownElement.textContent = timeLeft + 's';
+      }
+      
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        window.location.href = "https://ztapps.mywebsitee.online/";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
