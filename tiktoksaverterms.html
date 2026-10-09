@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TikTok Saver - Terms, Policy & About</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        amoled: '#05070A',
+                        darkBg: '#0B0F19',
+                        cardBg: 'rgba(15, 23, 42, 0.75)',
+                        cardBorder: 'rgba(56, 189, 248, 0.15)',
+                        accentBlue: '#00B4D8',
+                        neonBlue: '#0077B6',
+                        glowBlue: '#00F0FF',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1B263B;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0077B6;
+        }
+
+        /* Glassmorphism Styles */
+        .glass-card {
+            background: rgba(13, 20, 36, 0.7);
+            backdrop-filter: blur(16dp);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 180, 216, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-nav {
+            background: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Neon Glow Effects */
+        .glow-text {
+            text-shadow: 0 0 12px rgba(0, 180, 216, 0.4);
+        }
+
+        .glow-box {
+            box-shadow: 0 0 25px rgba(0, 180, 216, 0.15);
+        }
+
+        /* Tab Transition */
+        .tab-btn.active {
+            color: #00F0FF;
+            background: rgba(0, 180, 216, 0.15);
+            border-color: rgba(0, 240, 255, 0.4);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-amoled text-slate-200 font-sans min-h-screen selection:bg-accentBlue selection:text-white flex flex-col justify-between">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glass-nav px-4 py-3 sm:px-8">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <!-- App Logo & Title -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonBlue to-accentBlue flex items-center justify-center shadow-lg shadow-neonBlue/30">
+                    <i class="fa-solid fa-cloud-arrow-down text-white text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-white tracking-wide leading-tight">TikTok <span class="text-accentBlue glow-text">Saver</span></h1>
+                    <p class="text-[10px] text-slate-400 font-medium">Official Legal & Info Portal</p>
+                </div>
+            </div>
+
+            <!-- Developer Tag -->
+            <div class="hidden sm:flex items-center gap-2 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800 text-xs text-slate-300">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Developed By <span class="text-accentBlue font-semibold">ZT Tahir</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- TAB NAVIGATION BAR (Mobile & PC Friendly) -->
+    <div class="sticky top-[61px] z-40 bg-amoled/95 border-b border-slate-800/80 py-2.5 px-3 backdrop-blur-md">
+        <div class="max-w-4xl mx-auto flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar">
+            <button onclick="switchTab('about')" id="btn-about" class="tab-btn active text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl border border-transparent hover:text-white transition-all whitespace-nowrap flex items-center gap-2">
+                <i class="fa-solid fa-circle-info"></i> About Us
+            </button>
+            <button onclick="switchTab('privacy')" id="btn-privacy" class="tab-btn text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl border border-transparent hover:text-white transition-all whitespace-nowrap flex items-center gap-2 text-slate-400">
+                <i class="fa-solid fa-user-shield"></i> Privacy Policy
+            </button>
+            <button onclick="switchTab('terms')" id="btn-terms" class="tab-btn text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl border border-transparent hover:text-white transition-all whitespace-nowrap flex items-center gap-2 text-slate-400">
+                <i class="fa-solid fa-file-contract"></i> Terms & Conditions
+            </button>
+            <button onclick="switchTab('support')" id="btn-support" class="tab-btn text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl border border-transparent hover:text-white transition-all whitespace-nowrap flex items-center gap-2 text-slate-400">
+                <i class="fa-solid fa-headset"></i> Support
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-4xl mx-auto px-4 py-6 sm:py-8 w-full flex-grow">
+
+        <!-- SECTION 1: ABOUT US -->
+        <section id="sec-about" class="tab-content space-y-6">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+                <!-- Background Accent Glow -->
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-accentBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-lg bg-accentBlue/10 border border-accentBlue/30 text-accentBlue">
+                        <i class="fa-solid fa-circle-info text-xl"></i>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">About TikTok Saver</h2>
+                </div>
+
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-5">
+                    <strong class="text-accentBlue font-semibold">TikTok Saver</strong> is a powerful and easy-to-use application that allows users to download TikTok videos without watermark. The app is designed with a modern Black and Dark blue Themed interface for a smooth and attractive experience.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-6">
+                    This app also includes a smart video preview system where users can watch the video before downloading. All important information like username, ID name, bio, hashtags (#tags), caption, and profile picture is automatically fetched and displayed.
+                </p>
+
+                <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 mb-6 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center font-bold text-white text-lg shrink-0">
+                        ZT
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Lead Developer</div>
+                        <div class="text-base font-bold text-white">ZT Tahir</div>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-gradient-to-r from-neonBlue/20 to-transparent border-l-4 border-accentBlue">
+                    <h3 class="text-xs uppercase tracking-wider text-accentBlue font-bold mb-1">Our Mission</h3>
+                    <p class="text-slate-200 text-sm font-medium">
+                        Our mission is to provide a fast, secure, and user-friendly platform for downloading and previewing TikTok content.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PRIVACY POLICY -->
+        <section id="sec-privacy" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 sm:p-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                        <i class="fa-solid fa-user-shield text-xl"></i>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Privacy Policy</h2>
+                </div>
+
+                <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <span>We respect your privacy. This app does not collect any personal data.</span>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1"></i>
+                        <span>All downloads are processed directly on your device. We do not store any files on servers.</span>
+                    </div>
+
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-900/50 border border-slate-800">
+                        <i class="fa-solid fa-circle-exclamation text-amber-400 mt-1"></i>
+                        <span>This app is not affiliated with TikTok. Users are responsible for how they use the downloaded content.</span>
+                    </div>
+                </div>
+
+                <!-- Source Code Policy Box -->
+                <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-slate-900/90 border border-red-500/30 relative">
+                    <div class="flex items-center gap-2 text-red-400 font-bold text-base sm:text-lg mb-3">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Notice Regarding Source Code & Usage Policy
+                    </div>
+
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <p>This application is provided as a complete and compiled product. The source code is not publicly available and will not be distributed under any circumstances.</p>
+                        <p>Any attempt to reverse engineer, decompile, modify, or redistribute this application or its components is strictly prohibited and considered a violation of our policy.</p>
+                        <p>Users are granted permission to use this application solely for personal and intended purposes. Unauthorized modifications, repackaging, or reuse of any part of this application without explicit permission from the developer is not allowed.</p>
+                        <p class="font-semibold text-slate-200">By using this application, you agree to respect these terms and conditions.</p>
+                        <p class="text-red-400/90 font-medium pt-1">Violation of this policy may result in appropriate action.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: TERMS & CONDITIONS -->
+        <section id="sec-terms" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 sm:p-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2.5 rounded-lg bg-accentBlue/10 border border-accentBlue/30 text-accentBlue">
+                        <i class="fa-solid fa-file-contract text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-bold text-white">Terms & Conditions</h2>
+                        <p class="text-xs text-slate-400">Please read these rules carefully before using the app</p>
+                    </div>
+                </div>
+
+                <p class="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
+                    Welcome to our TikTok Video Downloader app. By using this app, you agree to the following Terms & Conditions.
+                </p>
+
+                <!-- 8 Points Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- Point 1 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">1</span>
+                            Use of the App
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-1 list-disc list-inside">
+                            <li>This app is provided for personal and lawful use only.</li>
+                            <li>You are responsible for how you use any downloaded content.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">2</span>
+                            Copyright
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-1 list-disc list-inside">
+                            <li>Please respect the intellectual property rights of content creators.</li>
+                            <li>Download or use videos only when you have permission or when allowed by applicable laws and the platform's terms.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">3</span>
+                            User Data
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-1 list-disc list-inside">
+                            <li>This app does not require account registration or login.</li>
+                            <li>We do not collect or store your personal information through the app.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">4</span>
+                            Third-Party Services
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-1 list-disc list-inside">
+                            <li>The app may use third-party services or APIs to process video links.</li>
+                            <li>We are not responsible for the availability or content of third-party services.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">5</span>
+                            Availability
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            We may update, improve, or discontinue features of the app at any time without prior notice.
+                        </p>
+                    </div>
+
+                    <!-- Point 6 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">6</span>
+                            Limitation of Liability
+                        </div>
+                        <ul class="text-xs sm:text-sm text-slate-300 space-y-1 list-disc list-inside">
+                            <li>This app is provided "as is" without warranties of any kind.</li>
+                            <li>We are not responsible for any loss, damage, or misuse resulting from the use of the app.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Point 7 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">7</span>
+                            Changes to These Terms
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            These Terms & Conditions may be updated from time to time. The latest version will always be available within the app.
+                        </p>
+                    </div>
+
+                    <!-- Point 8 -->
+                    <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800/80 hover:border-accentBlue/40 transition-all">
+                        <div class="flex items-center gap-2 text-accentBlue font-bold text-sm mb-1.5">
+                            <span class="w-6 h-6 rounded-md bg-accentBlue/10 flex items-center justify-center text-xs">8</span>
+                            Contact
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300">
+                            If you have any questions regarding these Terms & Conditions, please contact the app developer.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 p-4 rounded-xl bg-accentBlue/10 border border-accentBlue/30 text-center text-slate-200 text-xs sm:text-sm font-medium">
+                    By using this app, you acknowledge that you have read and agreed to these Terms & Conditions.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SUPPORT & HELP -->
+        <section id="sec-support" class="tab-content hidden space-y-6">
+            <div class="glass-card rounded-2xl p-6 sm:p-8 text-center max-w-2xl mx-auto">
+                <div class="w-16 h-16 rounded-full bg-accentBlue/10 border border-accentBlue/30 text-accentBlue flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mb-2">Help & Support Center</h2>
+                <p class="text-slate-400 text-sm mb-6">
+                    Have questions, suggestions, or experiencing an issue? Get in touch directly with our support team.
+                </p>
+
+                <!-- Email Card -->
+                <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 mb-6 glow-box">
+                    <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-2">Official Support Email</div>
+                    <div class="text-lg sm:text-xl font-mono font-bold text-accentBlue select-all break-all mb-4" id="email-text">
+                        zthelpcentere@gmail.com
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="mailto:zthelpcentere@gmail.com" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonBlue to-accentBlue hover:from-blue-600 hover:to-cyan-400 text-white font-semibold text-sm transition-all shadow-lg shadow-neonBlue/30 flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Email
+                        </a>
+                        <button onclick="copyToClipboard('zthelpcentere@gmail.com')" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all border border-slate-700 flex items-center gap-2">
+                            <i class="fa-solid fa-copy"></i> Copy Address
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Toast Notification -->
+                <div id="toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-xl z-50 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-sm"></i> Email address copied to clipboard!
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900 bg-amoled py-6 text-center text-xs text-slate-500 px-4">
+        <div class="max-w-4xl mx-auto space-y-2">
+            <p>© <span id="year">2026</span> TikTok Saver. Developed By <span class="text-slate-400 font-medium">ZT Tahir</span>.</p>
+            <p class="text-[11px] text-slate-600">All trademarks and copyrights belong to their respective owners.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Set dynamic current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Tab Switching Logic
+        function switchTab(tabId) {
+            // Hide all sections
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Deactivate all tab buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.classList.add('text-slate-400');
+            });
+
+            // Show selected section
+            const selectedContent = document.getElementById('sec-' + tabId);
+            if (selectedContent) {
+                selectedContent.classList.remove('hidden');
+            }
+
+            // Activate selected tab button
+            const selectedBtn = document.getElementById('btn-' + tabId);
+            if (selectedBtn) {
+                selectedBtn.classList.add('active');
+                selectedBtn.classList.remove('text-slate-400');
+            }
+
+            // Smooth scroll to top of content container
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Clipboard Copy Logic
+        function copyToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(showToast);
+            } else {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast();
+                } catch (err) {
+                    console.error('Fallback copy failed', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
